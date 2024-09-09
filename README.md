@@ -16,7 +16,7 @@ Interactive Web Demo App that defines Components, JSX, Props, and State
 - Part 1
   - Updating the Section 3 App
 - Part 2
-  - Tik Tak Toe App
+  - Tic-Tac-Toe App
 
 ## Section 5
 
