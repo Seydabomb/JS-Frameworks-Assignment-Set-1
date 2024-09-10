@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Player = ({ initialName, symbol }) => {
+const Player = ({ initialName, symbol, isActive, onChangeName }) => {
 	const [playerName, setPlayerName] = useState(initialName);
 	const [isEditing, setIsEditing] = useState(false);
 
@@ -8,6 +8,9 @@ const Player = ({ initialName, symbol }) => {
 		// don't use setIsEditing(!isEditing) because react schedules when to use the change.
 		// To get it instantaneously, use the arrow function
 		setIsEditing((editing) => !editing); // if true, sets to false. If false, sets to true.
+		if (isEditing) {
+			onChangeName(symbol, playerName);
+		}
 	}
 
 	function handleChange(event) {
@@ -25,7 +28,7 @@ const Player = ({ initialName, symbol }) => {
 	}
 
 	return (
-		<li>
+		<li className={isActive ? "active" : undefined}>
 			<span className="player">
 				{editablePlayerName}
 				<span className="player-symbol">{symbol}</span>
