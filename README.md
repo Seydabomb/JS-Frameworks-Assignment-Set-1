@@ -28,8 +28,11 @@ Practice with a simpler project: Investment Calculator
   - React Art app
     - You can sign in with email & password
     - You can create a new account
+    - Styling with Vanilla CSS
+    - Scoping Styles with CSS Modules
+    - CSS-in-JS styling with "Styled Components"
 - Part 2
-  - Adding in Tailwind
+  - Styling with Tailwind CSS
 
 ## Section 7
 
