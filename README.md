@@ -24,7 +24,12 @@ Practice with a simpler project: Investment Calculator
 
 ## Section 6
 
-content
+- Part 1
+  - React Art app
+    - You can sign in with email & password
+    - You can create a new account
+- Part 2
+  - Adding in Tailwind
 
 ## Section 7
 
