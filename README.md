@@ -20,7 +20,7 @@ Interactive Web Demo App that defines Components, JSX, Props, and State
 
 ## Section 5
 
-content
+Practice with a simpler project: Investment Calculator
 
 ## Section 6
 
