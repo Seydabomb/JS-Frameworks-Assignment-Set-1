@@ -30,6 +30,7 @@ Practice with a simpler project: Investment Calculator
     - You can create a new account
     - Styling with Vanilla CSS
     - Scoping Styles with CSS Modules
+      - CSS classes are scoped to the component (files) which import them -> No CSS class name clashes
     - CSS-in-JS styling with "Styled Components"
 - Part 2
   - Styling with Tailwind CSS
