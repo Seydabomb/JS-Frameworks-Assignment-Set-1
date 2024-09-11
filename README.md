@@ -38,7 +38,7 @@ Practice with a simpler project: Investment Calculator
 
 ## Section 7
 
-content
+Debugging Investment Calculator App
 
 ## Section 8
 
