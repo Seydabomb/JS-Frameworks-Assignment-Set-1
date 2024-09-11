@@ -34,6 +34,7 @@ Practice with a simpler project: Investment Calculator
     - CSS-in-JS styling with "Styled Components"
 - Part 2
   - Styling with Tailwind CSS
+    - Dynamic & Conditional Styling with Tailwind
 
 ## Section 7
 

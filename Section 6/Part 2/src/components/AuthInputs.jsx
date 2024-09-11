@@ -1,65 +1,60 @@
 import { useState } from "react";
-import { styled } from "styled-components";
 
 import Button from "./Button";
 import Input from "./Input";
 
-/* =================== Styled Components ========================= */
-// Tagged templates ``: like a function that receives the `` as an input. `` is a template literal.
-const ControlContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	gap: 0.5rem;
-	margin-bottom: 1.5rem;
-`;
-
 export default function AuthInputs() {
-	const [enteredEmail, setEnteredEmail] = useState("");
-	const [enteredPassword, setEnteredPassword] = useState("");
-	const [submitted, setSubmitted] = useState(false);
+  const [enteredEmail, setEnteredEmail] = useState("");
+  const [enteredPassword, setEnteredPassword] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
-	function handleInputChange(identifier, value) {
-		if (identifier === "email") {
-			setEnteredEmail(value);
-		} else {
-			setEnteredPassword(value);
-		}
-	}
+  function handleInputChange(identifier, value) {
+    if (identifier === "email") {
+      setEnteredEmail(value);
+    } else {
+      setEnteredPassword(value);
+    }
+  }
 
-	function handleLogin() {
-		setSubmitted(true);
-	}
+  function handleLogin() {
+    setSubmitted(true);
+  }
 
-	const emailNotValid = submitted && !enteredEmail.includes("@");
-	const passwordNotValid = submitted && enteredPassword.trim().length < 6;
+  const emailNotValid = submitted && !enteredEmail.includes("@");
+  const passwordNotValid = submitted && enteredPassword.trim().length < 6;
 
-	return (
-		<div id="auth-inputs">
-			<ControlContainer>
-				{/* You are dynamically determining to add the invalid class or not */}
-				<Input
-					label="Email"
-					invalid={emailNotValid}
-					type="email"
-					// style={{
-					// 	backgroundColor: emailNotValid ? "#fed2d2" : "#d1d5db",
-					// }}
-					onChange={(event) => handleInputChange("email", event.target.value)}
-				/>
+  return (
+    <div
+      id="auth-inputs"
+      className="mx-auto w-full max-w-sm rounded bg-gradient-to-b from-stone-700 to-stone-800 p-8 shadow-md"
+    >
+      <div className="mb-6 flex flex-col gap-2">
+        {/* You are dynamically determining to add the invalid class or not */}
+        <Input
+          label="Email"
+          invalid={emailNotValid}
+          type="email"
+          // style={{
+          // 	backgroundColor: emailNotValid ? "#fed2d2" : "#d1d5db",
+          // }}
+          onChange={(event) => handleInputChange("email", event.target.value)}
+        />
 
-				<Input
-					label="Password"
-					invalid={passwordNotValid}
-					type="password"
-					onChange={(event) => handleInputChange("password", event.target.value)}
-				/>
-			</ControlContainer>
-			<div className="actions">
-				<button type="button" className="text-button">
-					Create a new account
-				</button>
-				<Button onClick={handleLogin}>Sign In</Button>
-			</div>
-		</div>
-	);
+        <Input
+          label="Password"
+          invalid={passwordNotValid}
+          type="password"
+          onChange={(event) =>
+            handleInputChange("password", event.target.value)
+          }
+        />
+      </div>
+      <div className="flex justify-end gap-4">
+        <button type="button" className="hover:Text-amber-500 text-amber-400">
+          Create a new account
+        </button>
+        <Button onClick={handleLogin}>Sign In</Button>
+      </div>
+    </div>
+  );
 }
