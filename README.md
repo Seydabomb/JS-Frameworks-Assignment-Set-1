@@ -42,4 +42,4 @@ Debugging Investment Calculator App
 
 ## Section 8
 
-content
+Countdown mini-games: 1 second, 5 seconds, 10 seconds, and 15 seconds.
